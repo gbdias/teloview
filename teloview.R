@@ -89,6 +89,7 @@ server <- function(input, output) {
     })
   
   contigs <- reactive({
+    if (input$filetype == "AGP") {
     req(input$agpFile)
     contigs <- read.delim(input$agpFile$datapath, header = FALSE, stringsAsFactors = FALSE)
     contigs <- 
@@ -99,6 +100,7 @@ server <- function(input, output) {
           as.data.frame()
       )
     contigs
+    }
   })
   
   # Read bedgraph file
@@ -110,23 +112,17 @@ server <- function(input, output) {
 
   # Create genome plot
   output$genomePlot <- renderPlot({
-    if (input$filetype == "AGP") {
     pp <- getDefaultPlotParams(1)
     pp$data1height <- 1000
     pp$topmargin <- 1200
     kp <- plotKaryotype(genome = scaffolds(), plot.type = 1, plot.params = pp, labels.plotter = NULL, main = input$main_title)
     kpAddChromosomeNames(kp, yoffset = 300, cex = 0.7)
     kpBars(kp, data = telomeres(), y1 = telomeres()$score, ymax = max(telomeres()$score), border="red", r0 = 0.35, r1 = 0.9)
+    if (input$filetype == "AGP") {
     kpPlotRegions(kp, data = contigs(), data.panel = 1, col = c("lemonchiffon","grey75"), r0 = 0, r1 = 0.3)
-    } else if (input$filetype == "BED") {
-      pp <- getDefaultPlotParams(1)
-      pp$data1height <- 1000
-      pp$topmargin <- 1200
-      kp <- plotKaryotype(genome = scaffolds(), plot.type = 1, plot.params = pp, labels.plotter = NULL, main = input$main_title)
-      kpAddChromosomeNames(kp, yoffset = 300, cex = 0.7)
-      kpBars(kp, data = telomeres(), y1 = telomeres()$score, ymax = max(telomeres()$score), border="red", r0 = 0.35, r1 = 0.9)
     }
     })
+  
   # Save genome plot
   output$downloadPlot <- downloadHandler(
     filename = function() { "genomeplot.pdf" },
@@ -139,7 +135,9 @@ server <- function(input, output) {
       kp <- plotKaryotype(genome = scaffolds(), plot.type = 1, plot.params = pp, labels.plotter = NULL, main = input$main_title)
       kpAddChromosomeNames(kp, yoffset = 300, cex = 0.7)
       kpBars(kp, data = telomeres(), y1 = telomeres()$score, ymax = max(telomeres()$score), border="red", r0 = 0.35, r1 = 0.9)
+      if (input$filetype == "AGP") {
       kpPlotRegions(kp, data = contigs(), data.panel = 1, col = c("lemonchiffon","grey75"), r0 = 0, r1 = 0.3)
+      }
       dev.off()
     }
   )
