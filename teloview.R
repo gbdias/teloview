@@ -62,7 +62,8 @@ server <- function(input, output) {
   scaffolds <- reactive({
     if (input$filetype == "AGP") {
     req(input$agpFile,input$maxScaffolds)
-    scaffolds <- read.delim(input$agpFile$datapath, header = FALSE, stringsAsFactors = FALSE)
+    scaffolds <- read.delim(input$agpFile$datapath, header = FALSE, sep = "\t", stringsAsFactors = FALSE, comment.char = "#")
+    head(scaffolds)
     scaffolds <- 
       toGRanges(
         scaffolds %>%
