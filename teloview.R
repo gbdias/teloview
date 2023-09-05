@@ -43,7 +43,7 @@ server <- function(input, output) {
   library(dplyr)
   library(karyoploteR)
   library(rtracklayer)
-  options(shiny.maxRequestSize=30*1024^2)
+  options(shiny.maxRequestSize=100*1024^2)
   
   # Render instructions for agpFile
   output$agpFileInstructions <- renderText({
