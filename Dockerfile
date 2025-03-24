@@ -1,4 +1,9 @@
 FROM rocker/shiny:latest
+RUN apt-get update && apt-get install -y \
+    liblzma-dev \
+    zlib1g-dev \
+    libbz2-dev \
+    libcurl4-openssl-dev
 RUN install2.r dplyr BiocManager devtools remotes
 RUN R -e 'remotes::install_version("rsconnect", "1.1.0")'
 RUN R -e 'install.packages("shinythemes")'
