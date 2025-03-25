@@ -42,7 +42,6 @@ ui <- fluidPage(
 server <- function(input, output) {
   library(dplyr)
   library(karyoploteR)
-  library(rtracklayer)
   options(shiny.maxRequestSize=100*1024^2)
   
   # Render instructions for agpFile
@@ -63,29 +62,27 @@ server <- function(input, output) {
     if (input$filetype == "AGP") {
     req(input$agpFile,input$maxScaffolds)
     scaffolds <- read.delim(input$agpFile$datapath, header = FALSE, sep = "\t", stringsAsFactors = FALSE, comment.char = "#")
-    head(scaffolds)
     scaffolds <- 
       toGRanges(
         scaffolds %>%
           filter(V5=="W") %>%
           group_by(V1) %>%
           summarise(V2 = min(V2), V3 = max(V3)) %>%
-          arrange(-V3) %>% 
+          arrange(-V3) %>%
+          slice_head(n = input$maxScaffolds) %>%
           as.data.frame()
       )
-    scaffolds <- scaffolds[1:input$maxScaffolds,]
-    scaffolds
+      
     } else if (input$filetype == "BED") {
       req(input$bedFile,input$maxScaffolds)
       scaffolds <- read.delim(input$bedFile$datapath, header = FALSE, stringsAsFactors = FALSE)
       scaffolds <- 
         toGRanges(
           scaffolds %>%
-            arrange(-V3) %>% 
+            arrange(-V3) %>%
+            slice_head(n = input$maxScaffolds) %>%
             as.data.frame()
         )
-      scaffolds <- scaffolds[1:input$maxScaffolds,]
-      scaffolds
     }
     })
   
