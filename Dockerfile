@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 RUN install2.r dplyr shinythemes BiocManager
-RUN R -e 'if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager"); BiocManager::install("karyoploteR", ask = FALSE, Ncpus = parallel::detectCores())'WORKDIR /home/teloview
+RUN R -e 'if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager"); BiocManager::install("karyoploteR", ask = FALSE, Ncpus = parallel::detectCores())'
 WORKDIR /home/teloview
 
 COPY app.R app.R 
