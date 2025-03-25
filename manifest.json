@@ -1074,7 +1074,7 @@
         "biocViews": "Infrastructure, DataRepresentation",
         "URL": "https://bioconductor.org/packages/SparseArray",
         "BugReports": "https://github.com/Bioconductor/SparseArray/issues",
-        "Version": "1.6.0",
+        "Version": "1.6.2",
         "License": "Artistic-2.0",
         "Encoding": "UTF-8",
         "Authors@R": "c(\n\tperson(\"Hervé\", \"Pagès\", role=c(\"aut\", \"cre\"),\n\t\temail=\"hpages.on.github@gmail.com\",\n\t\tcomment=c(ORCID=\"0009-0002-8272-4522\")),\n\tperson(\"Vince\", \"Carey\", role=\"fnd\",\n\t\temail=\"stvjc@channing.harvard.edu\",\n\t\tcomment=c(ORCID=\"0000-0003-4046-0063\")),\n\tperson(\"Rafael A.\", \"Irizarry\", role=\"fnd\",\n\t\temail=\"rafa@ds.harvard.edu\",\n\t\tcomment=c(ORCID=\"0000-0002-3944-4309\")),\n\tperson(\"Jacques\", \"Serizay\", role=\"ctb\",\n\t\tcomment=c(ORCID=\"0000-0002-4295-0624\")))",
@@ -1086,15 +1086,15 @@
         "Collate": "utils.R options.R OPBufTree.R thread-control.R\nsparseMatrix-utils.R is_nonzero.R SparseArray-class.R\nCOO_SparseArray-class.R SVT_SparseArray-class.R\nextract_sparse_array.R read_block_as_sparse.R\nSparseArray-dim-tuning.R SparseArray-aperm.R\nSparseArray-subsetting.R SparseArray-subassignment.R\nSparseArray-abind.R SparseArray-summarization.R\nSparseArray-Arith-methods.R SparseArray-Compare-methods.R\nSparseArray-Logic-methods.R SparseArray-Math-methods.R\nSparseArray-Complex-methods.R SparseArray-misc-methods.R\nSparseArray-matrixStats.R rowsum-methods.R SparseMatrix-mult.R\nrandomSparseArray.R readSparseCSV.R is_nonna.R NaArray-class.R\nNaArray-aperm.R NaArray-subsetting.R NaArray-subassignment.R\nNaArray-abind.R NaArray-summarization.R NaArray-Arith-methods.R\nNaArray-Compare-methods.R NaArray-Logic-methods.R\nNaArray-Math-methods.R NaArray-misc-methods.R\nNaArray-matrixStats.R zzz.R",
         "git_url": "https://git.bioconductor.org/packages/SparseArray",
         "git_branch": "RELEASE_3_20",
-        "git_last_commit": "c665d9e",
-        "git_last_commit_date": "2024-10-29",
+        "git_last_commit": "89a7e4b",
+        "git_last_commit_date": "2025-02-18",
         "Repository": "Bioconductor 3.20",
-        "Date/Publication": "2024-11-08",
+        "Date/Publication": "2025-02-20",
         "NeedsCompilation": "yes",
-        "Packaged": "2024-11-09 00:13:45 UTC; biocbuild",
+        "Packaged": "2025-02-21 13:37:50 UTC; biocbuild",
         "Author": "Hervé Pagès [aut, cre] (<https://orcid.org/0009-0002-8272-4522>),\n  Vince Carey [fnd] (<https://orcid.org/0000-0003-4046-0063>),\n  Rafael A. Irizarry [fnd] (<https://orcid.org/0000-0002-3944-4309>),\n  Jacques Serizay [ctb] (<https://orcid.org/0000-0002-4295-0624>)",
         "Maintainer": "Hervé Pagès <hpages.on.github@gmail.com>",
-        "Built": "R 4.4.1; aarch64-apple-darwin20; 2024-11-09 22:13:18 UTC; unix"
+        "Built": "R 4.4.2; aarch64-apple-darwin20; 2025-02-22 22:22:09 UTC; unix"
       }
     },
     "SummarizedExperiment": {
