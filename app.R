@@ -32,7 +32,7 @@ ui <- fluidPage(
       textInput("main_title", label = "Enter main title for the plot.", value = "Genomic scaffolds")
     ),
     mainPanel(
-      plotOutput("genomePlot"),
+      plotOutput("genomePlot", width = "100%", height = "100%"),
       downloadLink("downloadPlot")
     )
   )
