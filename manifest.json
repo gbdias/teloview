@@ -747,7 +747,7 @@
         "biocViews": "Infrastructure, Software",
         "URL": "https://bioconductor.org/packages/MatrixGenerics",
         "BugReports": "https://github.com/Bioconductor/MatrixGenerics/issues",
-        "Version": "1.18.0",
+        "Version": "1.18.1",
         "License": "Artistic-2.0",
         "Encoding": "UTF-8",
         "Authors@R": "c(person(\"Constantin\", \"Ahlmann-Eltze\",\n                email = \"artjom31415@googlemail.com\", role = c(\"aut\"),\n                comment = c(ORCID = \"0000-0002-3762-068X\")),\n            person(\"Peter\", \"Hickey\", role = c(\"aut\", \"cre\"),\n                email = \"peter.hickey@gmail.com\",\n                comment = c(ORCID = \"0000-0002-8153-6258\")),\n            person(\"Hervé\", \"Pagès\", email = \"hpages.on.github@gmail.com\",\n                role = \"aut\"))",
@@ -759,15 +759,15 @@
         "Collate": "'MatrixGenerics-package.R' 'rowAlls.R' 'rowAnyNAs.R'\n'rowAnys.R' 'rowAvgsPerColSet.R' 'rowCollapse.R' 'rowCounts.R'\n'rowCummaxs.R' 'rowCummins.R' 'rowCumprods.R' 'rowCumsums.R'\n'rowDiffs.R' 'rowIQRDiffs.R' 'rowIQRs.R' 'rowLogSumExps.R'\n'rowMadDiffs.R' 'rowMads.R' 'rowMaxs.R' 'rowMeans.R'\n'rowMeans2.R' 'rowMedians.R' 'rowMins.R' 'rowOrderStats.R'\n'rowProds.R' 'rowQuantiles.R' 'rowRanges.R' 'rowRanks.R'\n'rowSdDiffs.R' 'rowSds.R' 'rowSums.R' 'rowSums2.R'\n'rowTabulates.R' 'rowVarDiffs.R' 'rowVars.R'\n'rowWeightedMads.R' 'rowWeightedMeans.R' 'rowWeightedMedians.R'\n'rowWeightedSds.R' 'rowWeightedVars.R'",
         "git_url": "https://git.bioconductor.org/packages/MatrixGenerics",
         "git_branch": "RELEASE_3_20",
-        "git_last_commit": "77728e3",
-        "git_last_commit_date": "2024-10-29",
+        "git_last_commit": "5fb4445",
+        "git_last_commit_date": "2025-01-08",
         "Repository": "Bioconductor 3.20",
-        "Date/Publication": "2024-11-08",
+        "Date/Publication": "2025-01-09",
         "NeedsCompilation": "no",
-        "Packaged": "2024-11-08 22:57:49 UTC; biocbuild",
+        "Packaged": "2025-01-10 07:47:14 UTC; biocbuild",
         "Author": "Constantin Ahlmann-Eltze [aut]\n    (<https://orcid.org/0000-0002-3762-068X>),\n  Peter Hickey [aut, cre] (<https://orcid.org/0000-0002-8153-6258>),\n  Hervé Pagès [aut]",
         "Maintainer": "Peter Hickey <peter.hickey@gmail.com>",
-        "Built": "R 4.4.1; ; 2024-11-09 21:57:02 UTC; unix"
+        "Built": "R 4.4.2; ; 2025-01-11 20:40:52 UTC; unix"
       }
     },
     "ProtGenerics": {
