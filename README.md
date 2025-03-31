@@ -1,11 +1,16 @@
 # teloview
 
 A simple R shiny app to visualize contigs, scaffolds, and telomere motifs.
+
 You can test the app here: https://gbdias-teloview.share.connect.posit.cloud
 
 <img width="1339" alt="Screenshot 2025-03-25 at 14 54 39" src="https://github.com/user-attachments/assets/cec8f469-db76-4bab-999d-b19958f4e556" />
 
 > Example of teloview output. Contigs are rendered as segments of alternating colors inside each scaffold. The abundance of the telomere motif is shown in the red line above each scaffold.
+
+
+>[!TIP]
+>The Posit Cloud instance of this app is hosted on a free plan and might take a long time to launch. For more stable/quicker usability try cloning the repository and executing the app.R script locally. You will need to install : shiny, shinythemes, dplyr, karyoploteR, and rtracklayer for it to work.
 
 # Inputs
 - Assembly file in AGP/BED format
@@ -22,6 +27,5 @@ tidk search --string TTACC --output telo_track --dir ${PWD} --extension bedgraph
 ```
 Make sure to replace the telomere string with the correct sequence for your species. Check [TeloBase](https://shinyapps.biodata.ceitec.cz/TeloBase/) for a compilation of telomere sequences.
 
-> [!INFO]
-> The Posit Cloud instance of this app is hosted on a free plan and might not be running at all times. For more stable usability try cloning the repository and executing the app.R script locally. You will need to install : shiny, shinythemes, dplyr, karyoploteR, and rtracklayer for it to work.
+
 
