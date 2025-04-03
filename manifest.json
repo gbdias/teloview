@@ -82,19 +82,20 @@
         "Package": "BH",
         "Type": "Package",
         "Title": "Boost C++ Header Files",
-        "Version": "1.84.0-0",
-        "Date": "2024-01-09",
-        "Author": "Dirk Eddelbuettel, John W. Emerson and Michael J. Kane",
-        "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
+        "Version": "1.87.0-1",
+        "Date": "2024-12-17",
+        "Authors@R": "c(person(\"Dirk\", \"Eddelbuettel\", role = c(\"aut\", \"cre\"), email = \"edd@debian.org\",\n                    comment = c(ORCID = \"0000-0001-6419-907X\")),\n             person(\"John W.\", \"Emerson\", role = \"aut\"), \n             person(\"Michael J.\", \"Kane\", role = \"aut\", \n                    comment = c(ORCID = \"0000-0003-1899-6662\")))",
         "Description": "Boost provides free peer-reviewed portable C++ source \n libraries.  A large part of Boost is provided as C++ template code\n which is resolved entirely at compile-time without linking.  This \n package aims to provide the most useful subset of Boost libraries \n for template use among CRAN packages. By placing these libraries in \n this package, we offer a more efficient distribution system for CRAN \n as replication of this code in the sources of other packages is \n avoided. As of release 1.84.0-0, the following Boost libraries are\n included: 'accumulators' 'algorithm' 'align' 'any' 'atomic' 'beast'\n 'bimap' 'bind' 'circular_buffer' 'compute' 'concept' 'config'\n 'container' 'date_time' 'detail' 'dynamic_bitset' 'exception'\n 'flyweight' 'foreach' 'functional' 'fusion' 'geometry' 'graph' 'heap'\n 'icl' 'integer' 'interprocess' 'intrusive' 'io' 'iostreams'\n 'iterator' 'lambda2' 'math' 'move' 'mp11' 'mpl' 'multiprecision'\n 'numeric' 'pending' 'phoenix' 'polygon' 'preprocessor' 'process'\n 'propery_tree' 'qvm' 'random' 'range' 'scope_exit' 'smart_ptr' 'sort'\n 'spirit' 'tuple' 'type_traits' 'typeof' 'unordered' 'url' 'utility'\n 'uuid'.",
         "License": "BSL-1.0",
         "URL": "https://github.com/eddelbuettel/bh,\nhttps://dirk.eddelbuettel.com/code/bh.html",
         "BugReports": "https://github.com/eddelbuettel/bh/issues",
         "NeedsCompilation": "no",
-        "Packaged": "2024-01-09 13:19:22 UTC; edd",
+        "Packaged": "2024-12-17 14:33:33 UTC; edd",
+        "Author": "Dirk Eddelbuettel [aut, cre] (<https://orcid.org/0000-0001-6419-907X>),\n  John W. Emerson [aut],\n  Michael J. Kane [aut] (<https://orcid.org/0000-0003-1899-6662>)",
+        "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
         "Repository": "CRAN",
-        "Date/Publication": "2024-01-10 11:53:35 UTC",
-        "Built": "R 4.4.0; ; 2024-04-05 15:14:54 UTC; unix"
+        "Date/Publication": "2024-12-17 18:20:03 UTC",
+        "Built": "R 4.4.1; ; 2025-02-01 04:49:11 UTC; unix"
       }
     },
     "BSgenome": {
@@ -258,7 +259,7 @@
         "Package": "BiocParallel",
         "Type": "Package",
         "Title": "Bioconductor facilities for parallel evaluation",
-        "Version": "1.40.0",
+        "Version": "1.40.1",
         "Authors@R": "c(\n    person(\"Martin\", \"Morgan\",\n        email = \"mtmorgan.bioc@gmail.com\",\n        role=c(\"aut\", \"cre\")),\n    person(\"Jiefei\", \"Wang\", role = \"aut\"),\n    person(\"Valerie\", \"Obenchain\", role=\"aut\"),\n    person(\"Michel\", \"Lang\", email=\"michellang@gmail.com\", role=\"aut\"),\n    person(\"Ryan\", \"Thompson\", email=\"rct@thompsonclan.org\", role=\"aut\"),\n    person(\"Nitesh\", \"Turaga\", role=\"aut\"),\n    person(\"Aaron\", \"Lun\", role = \"ctb\"),\n    person(\"Henrik\", \"Bengtsson\", role = \"ctb\"),\n    person(\"Madelyn\", \"Carlson\", role = \"ctb\",\n        comment = \"Translated 'Random Numbers' vignette from Sweave to RMarkdown / HTML.\"\n    ),\n    person(\"Phylis\", \"Atieno\", role = \"ctb\",\n        comment = \"Translated 'Introduction to BiocParallel' vignette from Sweave to Rmarkdown / HTML.\"\n    ),\n    person(\n        \"Sergio\", \"Oller\", role = \"ctb\",\n        comment = c(\n            \"Improved bpmapply() efficiency.\",\n            \"ORCID\" = \"0000-0002-8994-1549\"\n        )\n    ))",
         "Description": "This package provides modified versions and novel\n    implementation of functions for parallel evaluation, tailored to\n    use with Bioconductor objects.",
         "URL": "https://github.com/Bioconductor/BiocParallel",
@@ -266,25 +267,25 @@
         "biocViews": "Infrastructure",
         "License": "GPL-2 | GPL-3",
         "SystemRequirements": "C++11",
-        "Depends": "methods, R (>= 3.5.0)",
+        "Depends": "methods, R (>= 4.1.0)",
         "Imports": "stats, utils, futile.logger, parallel, snow, codetools",
         "Suggests": "BiocGenerics, tools, foreach, BBmisc, doParallel,\nGenomicRanges, RNAseqData.HNRNPC.bam.chr14,\nTxDb.Hsapiens.UCSC.hg19.knownGene, VariantAnnotation,\nRsamtools, GenomicAlignments, ShortRead, RUnit, BiocStyle,\nknitr, batchtools, data.table",
         "Enhances": "Rmpi",
         "Collate": "AllGenerics.R DeveloperInterface.R prototype.R bploop.R\nErrorHandling.R log.R bpbackend-methods.R bpisup-methods.R\nbplapply-methods.R bpiterate-methods.R bpstart-methods.R\nbpstop-methods.R BiocParallelParam-class.R bpmapply-methods.R\nbpschedule-methods.R bpvec-methods.R bpvectorize-methods.R\nbpworkers-methods.R bpaggregate-methods.R bpvalidate.R\nSnowParam-class.R MulticoreParam-class.R\nTransientMulticoreParam-class.R register.R SerialParam-class.R\nDoparParam-class.R SnowParam-utils.R BatchtoolsParam-class.R\nprogress.R ipcmutex.R worker-number.R utilities.R rng.R\nbpinit.R reducer.R worker.R bpoptions.R cpp11.R\nBiocParallel-defunct.R",
-        "LinkingTo": "BH, cpp11",
+        "LinkingTo": "BH (>= 1.87.0), cpp11",
         "VignetteBuilder": "knitr",
         "RoxygenNote": "7.1.2",
         "git_url": "https://git.bioconductor.org/packages/BiocParallel",
         "git_branch": "RELEASE_3_20",
-        "git_last_commit": "a57b788",
-        "git_last_commit_date": "2024-10-29",
+        "git_last_commit": "db5b145",
+        "git_last_commit_date": "2025-03-30",
         "Repository": "Bioconductor 3.20",
-        "Date/Publication": "2024-11-23",
+        "Date/Publication": "2025-03-31",
         "NeedsCompilation": "yes",
-        "Packaged": "2024-11-23 07:45:23 UTC; biocbuild",
+        "Packaged": "2025-03-31 23:31:35 UTC; biocbuild",
         "Author": "Martin Morgan [aut, cre],\n  Jiefei Wang [aut],\n  Valerie Obenchain [aut],\n  Michel Lang [aut],\n  Ryan Thompson [aut],\n  Nitesh Turaga [aut],\n  Aaron Lun [ctb],\n  Henrik Bengtsson [ctb],\n  Madelyn Carlson [ctb] (Translated 'Random Numbers' vignette from Sweave\n    to RMarkdown / HTML.),\n  Phylis Atieno [ctb] (Translated 'Introduction to BiocParallel' vignette\n    from Sweave to Rmarkdown / HTML.),\n  Sergio Oller [ctb] (Improved bpmapply() efficiency.,\n    <https://orcid.org/0000-0002-8994-1549>)",
         "Maintainer": "Martin Morgan <mtmorgan.bioc@gmail.com>",
-        "Built": "R 4.4.2; aarch64-apple-darwin20; 2024-11-24 00:03:44 UTC; unix"
+        "Built": "R 4.4.3; aarch64-apple-darwin20; 2025-04-02 17:28:37 UTC; unix"
       }
     },
     "BiocVersion": {
@@ -4222,7 +4223,7 @@
       "checksum": "c624aea21bca3c135b199a2eba3c48c1"
     },
     "app.R": {
-      "checksum": "901726eef19d99f4d1cb1134a5f78b3f"
+      "checksum": "f7166b4d7cc680226169940f8676566b"
     },
     "deploy.R": {
       "checksum": "dd2043f5303e74326e407f8a986b768c"
@@ -4231,7 +4232,7 @@
       "checksum": "a5bbe408bb557207c75b9d7dae1ad989"
     },
     "README.md": {
-      "checksum": "a3a0c28f831e795f26cc59856c4e93e7"
+      "checksum": "84274a58eb3e7adf0c84e67dc5c2a0d9"
     }
   },
   "users": null
